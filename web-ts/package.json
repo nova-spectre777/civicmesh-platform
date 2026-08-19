@@ -1,0 +1,7 @@
+{
+  "name":"civicmesh-web",
+  "version":"0.1.0",
+  "type":"module",
+  "scripts":{"build":"tsc && node scripts/package.mjs","test":"node --test dist/tests/*.test.js"},
+  "devDependencies":{}
+}

@@ -1,0 +1,7 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "SignedAlertEnvelope",
+  "type": "object",
+  "required": ["envelope_id","key_id","algorithm","payload_json","signature_b64"],
+  "properties": {"envelope_id":{"type":"string"},"key_id":{"type":"string"},"algorithm":{"const":"Ed25519"},"payload_json":{"type":"string"},"signature_b64":{"type":"string"}}
+}

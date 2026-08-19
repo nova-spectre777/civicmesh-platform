@@ -1,0 +1,4 @@
+[
+  {"resource_id":"shelter-demo-1","kind":"shelter","name":"Demo Government School","cell":"DEMO-1","capacity":300,"occupied":120,"water":true,"power":true,"open":true,"revision":1,"updated_at":"2026-08-19T16:00:00Z","source":"demo-operator"},
+  {"resource_id":"clinic-demo-1","kind":"clinic","name":"Demo Community Clinic","cell":"DEMO-2","capacity":40,"occupied":18,"water":true,"power":true,"open":true,"revision":1,"updated_at":"2026-08-19T16:02:00Z","source":"demo-operator"}
+]

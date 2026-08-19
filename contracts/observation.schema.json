@@ -1,0 +1,7 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Observation",
+  "type": "object",
+  "required": ["observation_id","kind","cell","value","created_at","expires_at","revision"],
+  "properties": {"observation_id":{"type":"string"},"kind":{"enum":["road","power","network","water","hazard","other"]},"cell":{"type":"string"},"value":{"type":"string"},"created_at":{"type":"string"},"expires_at":{"type":"string"},"revision":{"type":"integer"},"confidence":{"type":"number","minimum":0,"maximum":1},"source_class":{"enum":["authority","trusted_operator","community"]}}
+}

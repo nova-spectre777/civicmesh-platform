@@ -1,0 +1,5 @@
+package syncer
+
+import("civicmesh/gateway/internal/domain";"civicmesh/gateway/internal/store";"encoding/json";"fmt")
+type Result struct{Accepted int `json:"accepted"`;Ignored int `json:"ignored"`;Errors []string `json:"errors"`}
+func MergeBundle(s *store.Store,b domain.SyncBundle)Result{r:=Result{};for _,rec:=range b.Records{raw,_:=json.Marshal(rec.Body);var changed bool;switch rec.RecordType{case "resource":var v domain.ResourceSite;if err:=json.Unmarshal(raw,&v);err!=nil{r.Errors=append(r.Errors,err.Error());continue};changed=s.UpsertResource(v);case "help_request":var v domain.HelpRequest;if err:=json.Unmarshal(raw,&v);err!=nil{r.Errors=append(r.Errors,err.Error());continue};changed=s.UpsertRequest(v);case "observation":var v domain.Observation;if err:=json.Unmarshal(raw,&v);err!=nil{r.Errors=append(r.Errors,err.Error());continue};changed=s.UpsertObservation(v);default:r.Errors=append(r.Errors,fmt.Sprintf("unsupported record type %s",rec.RecordType));continue};if changed{r.Accepted++}else{r.Ignored++}};return r}

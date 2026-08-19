@@ -1,0 +1,1 @@
+{"compilerOptions":{"target":"ES2022","module":"NodeNext","moduleResolution":"NodeNext","outDir":"dist","rootDir":".","strict":true,"lib":["ES2022","DOM","WebWorker"],"skipLibCheck":true},"include":["src/**/*.ts","tests/**/*.ts","types/**/*.d.ts"]}

@@ -1,0 +1,7 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "AuthorityKey",
+  "type": "object",
+  "required": ["key_id","authority_id","algorithm","public_key_b64","status"],
+  "properties": {"key_id":{"type":"string"},"authority_id":{"type":"string"},"algorithm":{"const":"Ed25519"},"public_key_b64":{"type":"string"},"status":{"enum":["active","revoked","expired"]},"valid_from":{"type":"string"},"valid_until":{"type":["string","null"]},"public_key_spki_b64":{"type":"string"}}
+}

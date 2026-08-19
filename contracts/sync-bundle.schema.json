@@ -1,0 +1,7 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "SyncBundle",
+  "type": "object",
+  "required": ["bundle_id","node_id","created_at","records"],
+  "properties": {"bundle_id":{"type":"string"},"node_id":{"type":"string"},"created_at":{"type":"string"},"records":{"type":"array","items":{"type":"object","required":["record_type","record_id","revision","updated_at","body"],"properties":{"record_type":{"type":"string"},"record_id":{"type":"string"},"revision":{"type":"integer"},"updated_at":{"type":"string"},"body":{"type":"object"}}}}}
+}

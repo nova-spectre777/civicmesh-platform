@@ -1,0 +1,7 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "AlertPayload",
+  "type": "object",
+  "required": ["alert_id","authority_id","severity","category","headline","body","issued_at","expires_at","revision","areas"],
+  "properties": {"alert_id":{"type":"string"},"authority_id":{"type":"string"},"severity":{"enum":["info","minor","moderate","severe","extreme"]},"category":{"type":"string"},"headline":{"type":"string"},"body":{"type":"string"},"issued_at":{"type":"string"},"expires_at":{"type":"string"},"revision":{"type":"integer","minimum":1},"areas":{"type":"array","items":{"type":"string"}},"instructions":{"type":"array","items":{"type":"string"}},"languages":{"type":"object","additionalProperties":{"type":"object"}}}
+}

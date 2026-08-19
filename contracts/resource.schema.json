@@ -1,0 +1,7 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "ResourceSite",
+  "type": "object",
+  "required": ["resource_id","kind","name","cell","revision","updated_at"],
+  "properties": {"resource_id":{"type":"string"},"kind":{"enum":["shelter","clinic","water","food","charging","transport","other"]},"name":{"type":"string"},"cell":{"type":"string"},"capacity":{"type":["integer","null"]},"occupied":{"type":["integer","null"]},"water":{"type":"boolean"},"power":{"type":"boolean"},"open":{"type":"boolean"},"revision":{"type":"integer"},"updated_at":{"type":"string"},"source":{"type":"string"}}
+}
